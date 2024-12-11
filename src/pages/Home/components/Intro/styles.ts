@@ -12,8 +12,9 @@ export const IntroSection = styled.div`
         max-width: 36.75rem;
         flex-direction: column;
         gap: 3.5rem;
+        
 
-        div{
+        section{
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -28,13 +29,14 @@ export const IntroSection = styled.div`
             line-height: 2.8rem;
         }
         h2{
-            font-size: 1.25rem;
+            font-size: 1.275rem;
             font-weight: 400;
         }
     }
 
     img{
-        max-width: 29.75rem;
+        max-width: 50%;
+        object-fit: cover;
     }
 `
 
@@ -42,16 +44,17 @@ export const IntroItens = styled.div`
     display: flex;
     gap: 2.5rem;
     color: ${props => props.theme["base-text"]};
-    flex: 1;
 
-    div{
+    div {
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
+        
 
         span{
             display: flex;
             align-items: center;
+            font-size: 1rem;
             gap: 0.75rem;
         }
     }
