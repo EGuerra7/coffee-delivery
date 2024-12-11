@@ -15,8 +15,7 @@ export const CoffeContainer = styled.div`
  `
 
 export const CoffesSection = styled.div`
-    display: flex;
-    gap: 2.7rem;
-    width: 100%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 0.7fr)); 
+    gap: 3rem;
  `
