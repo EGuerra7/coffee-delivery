@@ -4,6 +4,7 @@ import InputNumber from "../../../../../components/InputNumber/InputNumber";
 import { ShoppingCart } from "phosphor-react";
 
 export interface Coffee {
+    id: number;
     ulrImage: string;
     types: string[];
     name: string;

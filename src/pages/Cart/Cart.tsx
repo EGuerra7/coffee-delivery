@@ -1,4 +1,4 @@
-export default function Checkout() {
+export default function Cart() {
   return (
     <div>Checkout</div>
   )

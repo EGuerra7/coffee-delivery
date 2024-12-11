@@ -17,6 +17,7 @@ import Irlandes from '../../../../assets/CoffesCup/irlandes.svg';
 
 export const coffees: Coffee[] = [
   {
+    id: 1,
     ulrImage: Expresso,
     types: ['TRADICIONAL'],
     name: 'Expresso Tradicional',
@@ -24,6 +25,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 2,
     ulrImage: ExpressoAmericano,
     types: ['TRADICIONAL'],
     name: 'Expresso Americano',
@@ -31,6 +33,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 3,
     ulrImage: ExpressoCremoso,
     types: ['TRADICIONAL'],
     name: 'Expresso Cremoso',
@@ -38,6 +41,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 4,
     ulrImage: ExpressoGelado,
     types: ['TRADICIONAL', 'GELADO'],
     name: 'Expresso Gelado',
@@ -45,6 +49,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 5,
     ulrImage: CafeComLeite,
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Café com Leite',
@@ -52,6 +57,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 6,
     ulrImage: Latte,
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Latte',
@@ -59,6 +65,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 7,
     ulrImage: Capuccino,
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Capuccino',
@@ -66,6 +73,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 8,
     ulrImage: Macchiato,
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Macchiato',
@@ -73,6 +81,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 9,
     ulrImage: Mocaccino,
     types: ['TRADICIONAL', 'COM LEITE'],
     name: 'Mocaccino',
@@ -80,6 +89,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 10,
     ulrImage: ChocolateQuente,
     types: ['ESPECIAL', 'COM LEITE'],
     name: 'Chocolate Quente',
@@ -87,6 +97,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 11,
     ulrImage: Cubano,
     types: ['ESPECIAL', 'ALCOÓLICO', 'GELADO'],
     name: 'Cubano',
@@ -94,6 +105,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 12,
     ulrImage: Havaiano,
     types: ['ESPECIAL'],
     name: 'Havaiano',
@@ -101,6 +113,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 13,
     ulrImage: Árabe,
     types: ['ESPECIAL'],
     name: 'Árabe',
@@ -108,6 +121,7 @@ export const coffees: Coffee[] = [
     value: 9.9,
   },
   {
+    id: 14,
     ulrImage: Irlandes,
     types: ['ESPECIAL', 'ALCOÓLICO'],
     name: 'Irlandês',
@@ -124,7 +138,7 @@ export default function CoffeShop() {
           { coffees.map(coffee => {
             return (
               <CardCoffee 
-                key= {coffee.name}
+                key= {coffee.id}
                 coffee= {coffee}
               />
             )
