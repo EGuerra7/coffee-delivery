@@ -33,4 +33,5 @@ export const ShopButton = styled.button`
     padding: 8px;
     border-radius: 8px;
     border: 0;
+    cursor: pointer;
 `

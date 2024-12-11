@@ -16,9 +16,10 @@ export const ButtonInputNumber = styled.button`
     align-items: center;
     background-color: transparent;
     border: 0;
+    cursor: pointer;
     color: ${props => props.theme["purple"]};
     transition: .1s;
-    cursor: pointer;
+    
 
     &:hover{
         color: ${props => props.theme["purple-dark"]};

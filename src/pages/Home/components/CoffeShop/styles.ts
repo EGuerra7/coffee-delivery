@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
- export const CoffeContainer = styled.div`
+export const CoffeContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -14,9 +14,9 @@ import styled from "styled-components";
         }
  `
 
- export const CoffesSection = styled.div`
+export const CoffesSection = styled.div`
     display: flex;
-    gap: 2rem;
+    gap: 2.7rem;
     width: 100%;
     flex-wrap: wrap;
  `

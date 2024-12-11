@@ -85,7 +85,7 @@ export const CoffeeValues = styled.div`
     }
 
     .shop_btn{
-        background-color: ${props => props.theme.purple};
+        background-color: ${props => props.theme["purple-dark"]};
         color: ${props => props.theme.white};
         display: flex;
         align-items: center;
@@ -93,6 +93,11 @@ export const CoffeeValues = styled.div`
         padding: 8px;
         border-radius: 8px;
         border: 0;
+        cursor: pointer;
+        transition: .1s;
 
+        &:hover {
+            background-color: ${props => props.theme["purple"]};
+        }
     }
 `
