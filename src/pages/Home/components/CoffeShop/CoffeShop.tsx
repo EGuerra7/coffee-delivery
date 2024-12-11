@@ -7,6 +7,10 @@ export default function CoffeShop() {
         <h1>Nossos cafés</h1>
         <CoffesSection>
             <CardCoffee />
+            <CardCoffee />
+            <CardCoffee />
+            <CardCoffee />
+            <CardCoffee />
         </CoffesSection>
     </CoffeContainer>
   )
