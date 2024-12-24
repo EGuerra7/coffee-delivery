@@ -1,4 +1,3 @@
-import { NavigateFunction } from "react-router-dom"
 import { OrderInfo } from "../../pages/Cart/Cart"
 import { Item } from "./reducer"
 
@@ -30,7 +29,6 @@ export type Actions =
             type: ActionTypes.CHECKOUT_CART
             payload: {
                 order: OrderInfo
-                callback: NavigateFunction
             }
         }
 
@@ -71,14 +69,12 @@ export function decrementItemQuantityAction(itemCoffee: Item['coffee']){
 }
 
 export function checkoutCartAction(
-    order: OrderInfo, 
-    callback: NavigateFunction
+    order: OrderInfo,
 ){
     return {
         type: ActionTypes.CHECKOUT_CART,
         payload: {
           order,
-          callback,
         },
       } satisfies Actions
 }

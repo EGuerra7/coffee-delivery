@@ -55,7 +55,10 @@ export function CartContextProvider({ children }: CartContextProviderProps){
     }
 
     function checkout(order: OrderInfo) {
-        dispatch(checkoutCartAction(order, navigate))
+        dispatch(checkoutCartAction(order));
+
+        const newOrderId = new Date().getTime() + 1;
+        navigate(`/order/${newOrderId}/success`);
     }
 
     function incrementItemQuantity(coffee: Item['coffee']) {

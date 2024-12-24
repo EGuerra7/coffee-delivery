@@ -20,7 +20,7 @@ export const Order = styled.div`
     gap: 40px;
 `
 
-export const SucessHeading = styled.header` 
+export const SucessHeading = styled.div` 
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -41,7 +41,7 @@ export const SucessHeading = styled.header`
     }
 `
 
-export const Info = styled.div`
+export const InfoDiv = styled.div`
     border: 1px solid;
     border-radius: 6px 36px;
     width: 100%;
@@ -66,7 +66,7 @@ export const InfoContent = styled.div`
     align-items: center;
     gap: 12px;
 
-    > svg {
+  >  svg {
       padding: 8px;
       border-radius: 999px;
     }

@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { InfoContent, Order, SucessContainer, SucessHeading } from "./styles";
+import { InfoContent, InfoDiv, Order, SucessContainer, SucessHeading } from "./styles";
 import { CartContext } from "../../contexts/CartContext";
 import { useParams } from "react-router-dom";
 import { useTheme } from "styled-components";
-import { CurrencyDollar, Info, MapPin, Timer } from "phosphor-react";
+import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
 import SuccessPhoto from '../../assets/Illustration.svg';
 
 export function Sucess(){
@@ -17,8 +17,8 @@ export function Sucess(){
         cash: 'Dinheiro',
     }
 
-    if (!orderInfo) {
-        return null
+    if(!orderInfo?.id){
+        return null;
     }
 
    
@@ -30,7 +30,7 @@ export function Sucess(){
                     <h3>Agora é só aguardar que logo o café chegará até você</h3>
                 </SucessHeading>
 
-                <Info>
+                <InfoDiv>
                     <InfoContent>
                         <div>
                             <MapPin 
@@ -43,12 +43,12 @@ export function Sucess(){
                                 <span>
                                     Entrega em{' '}
                                     <strong>
-                                        {orderInfo.street}, {orderInfo.number}
+                                        {orderInfo!.street}, {orderInfo!.number}
                                     </strong>
                                 </span>
 
                                 <span>
-                                    {orderInfo.neighborhood} - {orderInfo.city}, {orderInfo.state}
+                                    {orderInfo!.neighborhood} - {orderInfo!.city}, {orderInfo!.state}
                                 </span>
                             </div>
                         </div>
@@ -77,11 +77,11 @@ export function Sucess(){
                             <div>
                                 <span>Pagamento na entrega</span>
 
-                                <strong>{paymentMethod[orderInfo.paymentMethod]}</strong>
+                                <strong>{paymentMethod[orderInfo!.paymentMethod]}</strong>
                             </div>
                         </div>
                     </InfoContent>
-                </Info>
+                </InfoDiv>
             </Order>
 
             <img src={SuccessPhoto} />

@@ -76,8 +76,6 @@ export default function Cart() {
   }, 0)
  
   const handleOrderCheckout: SubmitHandler<FormInputs> = (data) => {
-    console.log(data);
-
     if (cart.length === 0) {
       return alert('É preciso ter pelo menos um item no carrinho')
     }
