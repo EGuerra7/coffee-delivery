@@ -8,7 +8,7 @@ export const InputNumberContainer = styled.div`
     gap: 0.5rem;
     background-color: ${props => props.theme["base-button"]};
     padding: 0.5rem;
-    font-size: 1.25;
+    font-size: 1.25rem;
 `
 
 export const ButtonInputNumber = styled.button`

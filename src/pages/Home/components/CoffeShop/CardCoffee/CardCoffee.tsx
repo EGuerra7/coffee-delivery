@@ -1,7 +1,8 @@
 import { CardCoffeeContainer, CoffeeTypes, CoffeeValues, CoffeInfos } from "./styles";
-
 import InputNumber from "../../../../../components/InputNumber/InputNumber";
 import { ShoppingCart } from "phosphor-react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../../../../contexts/CartContext";
 
 export interface Coffee {
     id: number;
@@ -13,12 +14,32 @@ export interface Coffee {
 }
 
 export default function CardCoffee({ coffee }: { coffee: Coffee }) {
+    const { addItem } = useContext(CartContext);
     const { ulrImage, types, name, description, value } = coffee;
 
     const formattedValue = value.toLocaleString('pt-BR', {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       });
+
+      const [countAmount, setCountAmount] = useState(1);
+
+      function handleMinusAcount() {
+        if(countAmount > 1){
+          setCountAmount(countAmount - 1);
+        } 
+          
+      }
+    
+      function handlePlusAcount() {
+        setCountAmount(countAmount + 1);
+        }
+
+    function handleAddItem(){
+        addItem({ coffee: coffee, quantity: countAmount});
+    }
+
+    
       
   return (
     <CardCoffeeContainer>
@@ -26,9 +47,9 @@ export default function CardCoffee({ coffee }: { coffee: Coffee }) {
             <div>
                 <img src={ulrImage} />
                 <CoffeeTypes>
-                    { types.map(type => {
+                    { types.map((type, index) => {
                         return(
-                            <span>{ type }</span>
+                            <span key={index}>{ type }</span>
                         )
                     }) }
                 </CoffeeTypes>
@@ -38,9 +59,13 @@ export default function CardCoffee({ coffee }: { coffee: Coffee }) {
                 <p>{ description }</p>
             </CoffeInfos>
             <CoffeeValues>
-                <span className="value"> R$ <b>{ formattedValue }</b></span>
-                <InputNumber />
-                <button className="shop_btn">
+                <span className="value">R$ <b>{ formattedValue }</b></span>
+                <InputNumber 
+                countAmount={countAmount}
+                handleMinusAcount={handleMinusAcount} 
+                handlePlusAcount={handlePlusAcount}
+                />
+                <button onClick={handleAddItem} className="shop_btn">
                     <ShoppingCart size={22} weight="fill"/>
                 </button>
             </CoffeeValues>

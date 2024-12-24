@@ -1,21 +1,19 @@
 import { Minus, Plus } from "phosphor-react";
 import { ButtonInputNumber, InputNumberContainer } from "./styles";
-import { useState } from "react";
 
-export default function InputNumber() {
-  const [countAmount, setCountAmount] = useState(1);
 
-  function handleMinusAcount() {
-    if(countAmount > 1){
-      setCountAmount(countAmount - 1);
-    } 
-      
-  }
-
-  function handlePlusAcount() {
-    setCountAmount(countAmount + 1);
+type Props = {
+  countAmount: number
+  handleMinusAcount: () => void
+  handlePlusAcount: () => void
 }
 
+export default function InputNumber({
+  countAmount,
+  handleMinusAcount,
+  handlePlusAcount
+  }: Props) {
+  
   return (
     <InputNumberContainer>
         <ButtonInputNumber onClick={handleMinusAcount}><Minus size={14}/></ButtonInputNumber>

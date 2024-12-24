@@ -15,6 +15,8 @@ import Havaiano from '../../../../assets/CoffesCup/havaiano.svg';
 import Árabe from '../../../../assets/CoffesCup/arabe.svg';
 import Irlandes from '../../../../assets/CoffesCup/irlandes.svg';
 
+
+// eslint-disable-next-line react-refresh/only-export-components
 export const coffees: Coffee[] = [
   {
     id: 1,
@@ -131,6 +133,7 @@ export const coffees: Coffee[] = [
 ];
 
 export default function CoffeShop() {
+
   return (
     <CoffeContainer>
         <h1>Nossos cafés</h1>

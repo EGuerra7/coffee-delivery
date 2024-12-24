@@ -33,5 +33,24 @@ export const ShopButton = styled.button`
     padding: 8px;
     border-radius: 8px;
     border: 0;
+    position: relative;
     cursor: pointer;
+
+    span{
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: ${props => props.theme.white};
+        background-color: ${props => props.theme["yellow-dark"]};
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        transform: translate(50%, -50%);
+    }
 `

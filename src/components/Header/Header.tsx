@@ -4,10 +4,14 @@ import logoCoffee from '../../assets/coffe-logo.svg';
 import { useTheme } from "styled-components";
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export default function Header() {
+  const { cart } = useContext(CartContext);
   const theme = useTheme();
 
+  
   return (
     <HeaderContainer>
         <Link to="/">
@@ -23,6 +27,7 @@ export default function Header() {
             <Link to={'cart'}>
             <ShopButton>
               <ShoppingCart  size={22} weight="fill"/>
+              {cart.length > 0 ? <span >{ cart.length }</span> : null}
             </ShopButton>
             </Link>
         </section>
